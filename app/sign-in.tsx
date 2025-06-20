@@ -1,12 +1,13 @@
 import icons from "@/constants/icons";
 import images from "@/constants/images";
-import { Slot } from "expo-router";
+import { useRouter } from "expo-router";
 import React from "react";
 import { Image, ScrollView, Text, TouchableOpacity, View } from "react-native";
 import { SafeAreaView } from "react-native-safe-area-context";
 
 const SignIn = () => {
-  const handleLogin = () => <Slot />;
+  const router = useRouter();
+  const handleLogin = () => router.replace("/");
   return (
     <SafeAreaView className="bg-white h-full p-4">
       <ScrollView contentContainerClassName="h-full">

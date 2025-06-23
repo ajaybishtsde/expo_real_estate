@@ -71,15 +71,17 @@ const Profile = () => {
         <View className="flex-1 h-full w-full">
           {settings.slice(0, 2).map((item, i) => (
             <SettingsLists
+              key={i}
               icon={item.icon}
               title={item.title}
               handleClick={() => {}}
             />
           ))}
         </View>
-        <View className="flex-1 h-full w-full mt-6">
+        <View className="flex-1 h-full w-full mt-4">
           {settings.slice(2).map((item, i) => (
             <SettingsLists
+              key={i}
               icon={item.icon}
               title={item.title}
               handleClick={() => {}}

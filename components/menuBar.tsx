@@ -6,13 +6,15 @@ const MenuBar = ({
   title,
   showLeftIcon,
   showRightIcon,
+  titleStyle,
 }: {
   title: string;
   showLeftIcon?: boolean;
   showRightIcon?: boolean;
+  titleStyle?: string;
 }) => {
   return (
-    <View className="flex-1 flex-row justify-between items-center py-2">
+    <View className="flex-row justify-between items-center py-2">
       {showLeftIcon && (
         <TouchableOpacity
           activeOpacity={0.7}
@@ -22,7 +24,9 @@ const MenuBar = ({
         </TouchableOpacity>
       )}
 
-      <Text className="text-xl font-rubik-semibold">{title}</Text>
+      <Text className={`text-xl font-rubik-semibold ${titleStyle}`}>
+        {title}
+      </Text>
       {showRightIcon && (
         <TouchableOpacity
           activeOpacity={0.7}
